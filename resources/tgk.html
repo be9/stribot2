@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Текущая температура в районе котельной ООО &laquo;ТГК-1&raquo; </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+    <meta http-equiv="refresh" content="60">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+
+    <script>
+      $(function()
+      {
+        $( "#begin" ).datepicker({ dateFormat: "dd-mm-yy"});
+        $( "#begin" ).datepicker( "option", "monthNames", [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ] );
+        $( "#end" ).datepicker({ dateFormat: "dd-mm-yy"});
+        $( "#end" ).datepicker( "option", "monthNames", [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ] );
+
+        $( "#begin" ).datepicker( "option", "dayNamesMin", [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ] );
+        $( "#end" )  .datepicker( "option", "dayNamesMin", [ "Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб" ] );
+
+        $( "#begin" ).datepicker( "option", "firstDay", 1 );
+        $( "#end" )  .datepicker( "option", "firstDay", 1 );
+
+        $( "#begin" ).datepicker( "option", "maxDate", "25-11-2018");$( "#end" ).datepicker( "option", "maxDate", "25-11-2018");$( "#begin" ).datepicker( "option", "minDate", "30-11-1999");$( "#end" ).datepicker( "option", "minDate", "30-11-1999");$( "#begin" ).datepicker( "setDate", "24-11-2018");$( "#end" ).datepicker( "setDate", "25-11-2018");      });
+    </script>
+  </head>
+  <body>
+    <center>
+      <h2>Текущая температура в районе котельной ООО &laquo;ТГК-1&raquo;&nbsp;&nbsp;&nbsp;-10.6&deg;C
+
+      </h2>
+
+      <form>
+        <label>
+          Начало: <input type="text" id="begin" readonly="1" name="begin" />
+        </label>
+        <label>
+          Окончание: <input type="text" id="end" readonly="1" name="end"/>
+        </label>
+        <input type="submit" value="Показать"
+             onclick="$(function(){$( '#end' ).datepicker( 'option', 'dateFormat', 'yy-mm-dd'); $( '#begin' ).datepicker( 'option', 'dateFormat', 'yy-mm-dd');});"/>
+
+      </form>
+     <img id='graphic' src='http://tgk1.org/utils/graphic.php?width=1270&height=760&external=1'/>      <p>
+
+      <a href="http://tgk1.org/utils/external_view.php?begin=2018-11-25">Данные за сутки</a> | <a href="http://tgk1.org/utils/external_view.php?begin=2018-11-24">Данные за двое суток</a> | <a href="http://tgk1.org/utils/external_view.php?begin=2018-11-23">Данные за трое суток</a> | <a href="http://tgk1.org/utils/external_view.php?begin=2018-11-19">Данные за 7 дней</a> | <a href="http://tgk1.org/utils/table_ext.php">Данные за произвольный период в табличном виде</a>
+
+      </p>
+
+
+    </center>
+  </body>
+</html>
