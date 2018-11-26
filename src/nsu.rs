@@ -1,14 +1,25 @@
-use regex::Regex;
-use std::time::Duration;
-
 use errors::StribotError;
+use regex::Regex;
+use reqwest::Url;
+use std::time::{Duration, SystemTime};
 
 pub fn current_temperature() -> Result<f64, StribotError> {
     let client = reqwest::Client::builder()
-        .timeout(Duration::from_secs(5))
+        .timeout(Duration::from_secs(3))
         .build()?;
 
-    let mut resp = client.get("http://tgk1.org/utils/external_view.php").send()?;
+    let tick = SystemTime::now()
+        .duration_since(SystemTime::UNIX_EPOCH)
+        .unwrap()
+        .as_secs()
+        .to_string();
+
+    let rand = rand::random::<f64>().to_string();
+
+    let url = Url::parse_with_params("http://weather.nsu.ru/loadata.php?std=three",
+                                     &[("tick", tick), ("rand", rand)]).unwrap();
+
+    let mut resp = client.get(url).send()?;
     if !resp.status().is_success() {
         return Err(StribotError::StatusError)
     }
@@ -22,7 +33,7 @@ pub fn current_temperature() -> Result<f64, StribotError> {
 
 fn parse_temperature(body: &str) -> Result<f64, ()> {
     lazy_static! {
-        static ref RE: Regex = Regex::new(r"(-?[\d.,]+)&deg;C").unwrap();
+        static ref RE: Regex = Regex::new(r"Температура около НГУ (-?[\d.,]+) C").unwrap();
     }
 
     match RE.captures(body) {
@@ -39,14 +50,14 @@ fn parse_temperature(body: &str) -> Result<f64, ()> {
 mod tests {
     use std::fs::File;
     use std::io::prelude::*;
-    use tgk::parse_temperature;
+    use nsu::parse_temperature;
 
     #[test]
     fn temp_parsing() {
-        let mut file = File::open("resources/tgk.html").unwrap();
+        let mut file = File::open("resources/nsu.html").unwrap();
         let mut contents = String::new();
         file.read_to_string(&mut contents).unwrap();
 
-        assert_eq!(parse_temperature(&contents).unwrap(), -10.6);
+        assert_eq!(parse_temperature(&contents).unwrap(), -7.8);
     }
 }

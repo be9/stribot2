@@ -1,0 +1,141 @@
+
+document.Xpoints = [ 0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,63,65,67,69,71,73,75,77,79,81,83,85,87,89,91,93,95,97,99,101,103,105,107,109,111,113,115,117,119,121,123,125,127,129,131,133,135,137,139,141,143,145,147,149,151,153,155,157,159,161,163,165,167,169,171,173,175,177,179,181,183,185,187,188,190,192,194,196,198,200,202,204,206,208,210,212,214,216,218,220,222,224,226,228,230,232,234,236,238,240,242,244,246,248,250,252,254,256,258,260,262,264,266,268,270,272,274,276,278,280,282,284,286,288,290,292,294,296,298,300,302,304,306,308,310,312,313,315,317,319,321,323,325,327,329,331,333,335,337,339,341,343,345,347,349,351,353,355,357,359,361,363,365,367,369,371,373,375,377,379,381,383,385,387,389,391,393,395,397,399,401,403,405,407,409,411,413,415,417,419,421,423,425,427,429,431,433,435,437,438,440,442,444,446,448,450,452,454,456,458,460,462,464,466,468,470,472,474,476,478,480,482,484,486,488,490,492,494,496,498,500,500 ];
+document.Ypoints = [ 31,43,43,56,67,70,82,82,82,82,82,82,82,83,90,85,83,84,86,86,84,99,100,102,108,110,108,108,113,125,131,134,141,156,172,186,196,189,189,200,208,211,219,229,235,246,253,256,261,272,282,282,281,267,253,246,234,215,207,200,197,186,181,176,173,168,161,159,153,150,146,146,146,146,140,135,134,134,134,128,127,134,133,126,121,114,108,108,106,101,100,95,95,86,82,82,86,95,95,95,95,95,98,100,102,100,98,95,95,87,83,82,81,76,76,75,73,69,69,69,70,75,75,78,82,83,94,100,103,108,108,114,121,121,123,127,134,134,134,135,142,150,164,193,209,211,206,211,214,216,213,213,223,245,273,285,288,295,312,322,331,361,384,409,425,440,453,460,464,469,469,469,469,468,453,445,434,414,395,392,390,386,392,385,373,366,361,356,353,353,350,344,343,340,341,340,340,343,341,348,353,363,366,378,385,382,386,385,371,366,359,352,352,353,353,350,341,334,327,327,323,320,318,315,314,314,314,315,315,315,319,319,320,317,315,314,314,312,309,305,301,294,290,288,289,290,290,288,288,292,295,292,296,301 ];
+
+var graph = document.graph;
+graph.clear();
+
+
+graph.setStroke(1);
+
+graph.setColor("#EEEEEE");graph.drawLine(4, 0, 4, 500);
+graph.setColor("#808080");graph.drawLine(11, 0, 11, 500);
+graph.setColor("#EEEEEE");graph.drawLine(18, 0, 18, 500);
+graph.setColor("#EEEEEE");graph.drawLine(25, 0, 25, 500);
+graph.setColor("#EEEEEE");graph.drawLine(32, 0, 32, 500);
+graph.setColor("#EEEEEE");graph.drawLine(39, 0, 39, 500);
+graph.setColor("#EEEEEE");graph.drawLine(46, 0, 46, 500);
+graph.setColor("#808080");graph.drawLine(53, 0, 53, 500);
+graph.setColor("#EEEEEE");graph.drawLine(60, 0, 60, 500);
+graph.setColor("#EEEEEE");graph.drawLine(66, 0, 66, 500);
+graph.setColor("#EEEEEE");graph.drawLine(73, 0, 73, 500);
+graph.setColor("#EEEEEE");graph.drawLine(80, 0, 80, 500);
+graph.setColor("#EEEEEE");graph.drawLine(87, 0, 87, 500);
+graph.setColor("#808080");graph.drawLine(94, 0, 94, 500);
+graph.setColor("#EEEEEE");graph.drawLine(101, 0, 101, 500);
+graph.setColor("#EEEEEE");graph.drawLine(108, 0, 108, 500);
+graph.setColor("#EEEEEE");graph.drawLine(115, 0, 115, 500);
+graph.setColor("#EEEEEE");graph.drawLine(122, 0, 122, 500);
+graph.setColor("#EEEEEE");graph.drawLine(129, 0, 129, 500);
+graph.setColor("#808080");graph.drawLine(136, 0, 136, 500);
+graph.setColor("#EEEEEE");graph.drawLine(143, 0, 143, 500);
+graph.setColor("#EEEEEE");graph.drawLine(150, 0, 150, 500);
+graph.setColor("#EEEEEE");graph.drawLine(157, 0, 157, 500);
+graph.setColor("#EEEEEE");graph.drawLine(164, 0, 164, 500);
+graph.setColor("#EEEEEE");graph.drawLine(171, 0, 171, 500);
+graph.setColor("#808080");graph.drawLine(178, 0, 178, 500);
+graph.setColor("#EEEEEE");graph.drawLine(185, 0, 185, 500);
+graph.setColor("#EEEEEE");graph.drawLine(191, 0, 191, 500);
+graph.setColor("#EEEEEE");graph.drawLine(198, 0, 198, 500);
+graph.setColor("#EEEEEE");graph.drawLine(205, 0, 205, 500);
+graph.setColor("#EEEEEE");graph.drawLine(212, 0, 212, 500);
+graph.setColor("#808080");graph.drawLine(219, 0, 219, 500);
+graph.setColor("#EEEEEE");graph.drawLine(226, 0, 226, 500);
+graph.setColor("#EEEEEE");graph.drawLine(233, 0, 233, 500);
+graph.setColor("#EEEEEE");graph.drawLine(240, 0, 240, 500);
+graph.setColor("#EEEEEE");graph.drawLine(247, 0, 247, 500);
+graph.setColor("#EEEEEE");graph.drawLine(254, 0, 254, 500);
+graph.setColor("#808080");graph.drawLine(261, 0, 261, 500);
+graph.setColor("#EEEEEE");graph.drawLine(268, 0, 268, 500);
+graph.setColor("#EEEEEE");graph.drawLine(275, 0, 275, 500);
+graph.setColor("#EEEEEE");graph.drawLine(282, 0, 282, 500);
+graph.setColor("#EEEEEE");graph.drawLine(289, 0, 289, 500);
+graph.setColor("#EEEEEE");graph.drawLine(296, 0, 296, 500);
+graph.setColor("#808080");graph.drawLine(303, 0, 303, 500);
+graph.setColor("#EEEEEE");graph.drawLine(310, 0, 310, 500);
+graph.setColor("#EEEEEE");graph.drawLine(316, 0, 316, 500);
+graph.setColor("#EEEEEE");graph.drawLine(323, 0, 323, 500);
+graph.setColor("#EEEEEE");graph.drawLine(330, 0, 330, 500);
+graph.setColor("#EEEEEE");graph.drawLine(337, 0, 337, 500);
+graph.setColor("#808080");graph.drawLine(344, 0, 344, 500);
+graph.setColor("#EEEEEE");graph.drawLine(351, 0, 351, 500);
+graph.setColor("#EEEEEE");graph.drawLine(358, 0, 358, 500);
+graph.setColor("#EEEEEE");graph.drawLine(365, 0, 365, 500);
+graph.setColor("#EEEEEE");graph.drawLine(372, 0, 372, 500);
+graph.setColor("#EEEEEE");graph.drawLine(379, 0, 379, 500);
+graph.setColor("#808080");graph.drawLine(386, 0, 386, 500);
+graph.setColor("#EEEEEE");graph.drawLine(393, 0, 393, 500);
+graph.setColor("#EEEEEE");graph.drawLine(400, 0, 400, 500);
+graph.setColor("#EEEEEE");graph.drawLine(407, 0, 407, 500);
+graph.setColor("#EEEEEE");graph.drawLine(414, 0, 414, 500);
+graph.setColor("#EEEEEE");graph.drawLine(421, 0, 421, 500);
+graph.setColor("#808080");graph.drawLine(428, 0, 428, 500);
+graph.setColor("#EEEEEE");graph.drawLine(435, 0, 435, 500);
+graph.setColor("#EEEEEE");graph.drawLine(441, 0, 441, 500);
+graph.setColor("#EEEEEE");graph.drawLine(448, 0, 448, 500);
+graph.setColor("#EEEEEE");graph.drawLine(455, 0, 455, 500);
+graph.setColor("#EEEEEE");graph.drawLine(462, 0, 462, 500);
+graph.setColor("#808080");graph.drawLine(469, 0, 469, 500);
+graph.setColor("#EEEEEE");graph.drawLine(476, 0, 476, 500);
+graph.setColor("#EEEEEE");graph.drawLine(483, 0, 483, 500);
+graph.setColor("#EEEEEE");graph.drawLine(490, 0, 490, 500);
+graph.setColor("#EEEEEE");graph.drawLine(497, 0, 497, 500);
+graph.setStroke(2);
+graph.setColor("#808080");
+graph.drawLine(94.2476851852, 0, 94.2476851852, 500);
+graph.drawString('<b>24 Ноябрь &raquo;</b>', 97.2476851852, 43);graph.drawLine(260.914351852, 0, 260.914351852, 500);
+graph.drawString('<b>25 Ноябрь &raquo;</b>', 263.914351852, 43);graph.drawLine(427.581018519, 0, 427.581018519, 500);
+graph.drawString('<b>26 Ноябрь &raquo;</b>', 430.581018519, 43);graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 494, 500, 494);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-14</div>', -25, 487);graph.drawString('<b>-14 &deg;C</b>', 508, 487)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 463, 500, 463);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-13</div>', -25, 456);graph.drawString('<b>-13 &deg;C</b>', 508, 456)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 432, 500, 432);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-12</div>', -25, 425);graph.drawString('<b>-12 &deg;C</b>', 508, 425)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 401, 500, 401);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-11</div>', -25, 394);graph.drawString('<b>-11 &deg;C</b>', 508, 394)
+graph.setStroke(1); graph.setColor("#8080FF");graph.drawLine(0, 370, 500, 370);
+graph.setColor("#4040FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-10</div>', -25, 363);graph.drawString('<b>-10 &deg;C</b>', 508, 363)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 339, 500, 339);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-9</div>', -25, 331);graph.drawString('<b>-9 &deg;C</b>', 508, 331)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 308, 500, 308);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-8</div>', -25, 300);graph.drawString('<b>-8 &deg;C</b>', 508, 300)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 277, 500, 277);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-7</div>', -25, 269);graph.drawString('<b>-7 &deg;C</b>', 508, 269)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 246, 500, 246);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-6</div>', -25, 238);graph.drawString('<b>-6 &deg;C</b>', 508, 238)
+graph.setStroke(1); graph.setColor("#8080FF");graph.drawLine(0, 215, 500, 215);
+graph.setColor("#4040FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-5</div>', -25, 207);graph.drawString('<b>-5 &deg;C</b>', 508, 207)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 184, 500, 184);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-4</div>', -25, 176);graph.drawString('<b>-4 &deg;C</b>', 508, 176)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 153, 500, 153);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-3</div>', -25, 145);graph.drawString('<b>-3 &deg;C</b>', 508, 145)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 122, 500, 122);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-2</div>', -25, 114);graph.drawString('<b>-2 &deg;C</b>', 508, 114)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 91, 500, 91);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">-1</div>', -25, 83);graph.drawString('<b>-1 &deg;C</b>', 508, 83)
+graph.setStroke(2); graph.setColor("#000000");graph.drawLine(0, 60, 500, 60);
+graph.setColor("#000000");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">0</div>', -25, 52);graph.drawString('<b>0 &deg;C</b>', 508, 52)
+graph.setStroke(1); graph.setColor("#C0C0FF");graph.drawLine(0, 29, 500, 29);
+graph.setColor("#8080FF");graph.drawString('<div style="width: 22px; text-align: right; font-weight: bold;">1</div>', -25, 21);graph.drawString('<b>1 &deg;C</b>', 508, 21)
+
+id = 'temp';
+cnv = document.all? (document.all[id] || null)
+        : document.getElementById? (document.getElementById(id) || null)
+        : null;
+if(cnv) cnv.innerHTML = '-7.8&deg;C';
+window.document.title = 'Температура около НГУ -7.8 C';
+
+id = 'avertemp';
+cnv = document.all? (document.all[id] || null)
+        : document.getElementById? (document.getElementById(id) || null)
+        : null;
+if(cnv) cnv.innerHTML = '-2.5&deg;C';
+
+graph.paint();
+
+graph.setStroke(2);
+graph.setColor("#FF0000");
+graph.drawPolyline(document.Xpoints, document.Ypoints);
+graph.paint();
+
+1;
