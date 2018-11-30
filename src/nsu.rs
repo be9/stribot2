@@ -40,23 +40,20 @@ fn parse_temperature(body: &str) -> Result<f64, ()> {
         Some(caps) => {
             let degrees = caps.get(1).unwrap().as_str();
 
-            Ok(degrees.parse().unwrap())
+            Ok(degrees.replace(",", ".").parse().unwrap())
         },
         None => Err(()),
     }
 }
 
+
 #[cfg(test)]
 mod tests {
-    use std::fs::File;
-    use std::io::prelude::*;
     use nsu::parse_temperature;
 
     #[test]
-    fn temp_parsing() {
-        let mut file = File::open("resources/nsu.html").unwrap();
-        let mut contents = String::new();
-        file.read_to_string(&mut contents).unwrap();
+    fn test_parse_temperature() {
+        let contents = include_str!("../resources/nsu.html");
 
         assert_eq!(parse_temperature(&contents).unwrap(), -7.8);
     }
